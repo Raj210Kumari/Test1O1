@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.use("/auth", authRouter);
 app.use("/sprint", sprintRouter);
-app.use("/", (req, res) =>{
+app.get("/", (req, res) =>{
     return res.send("<h1>Hello World</h1>")
 })
 
