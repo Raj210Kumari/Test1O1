@@ -13,6 +13,9 @@ app.use(express.json());
 
 app.use("/auth", authRouter);
 app.use("/sprint", sprintRouter);
+app.use("/", (req, res) =>{
+    return res.send("<h1>Hello World</h1>")
+})
 
 app.listen(PORT, () =>{
     connection();
